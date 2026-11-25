@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Exact 5-Color Palette ── */
+  --color-oxblood:       #4D0C1E;
+  --color-oxblood-dark:  #370614;
+  --color-crimson:       #7B2137;
+  --color-crimson-hover: #67192C;
+  --color-mauve:         #A85B63;
+  --color-mauve-light:   #F6EFF0;
+  --color-mauve-border:  #DBC8CB;
+  --color-forest:        #2D4A3F;
+  --color-forest-light:  #EBF2EE;
+  --color-forest-border: #AEC5B9;
+  --color-cream:         #E6DFD7;
+  --color-cream-light:   #FAF8F5;
+  --color-cream-border:  #D8CFCE;
+
+  /* ── Monospaced Font Stack ── */
+  --font-sans: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', ui-monospace, monospace;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', ui-monospace, monospace;
+}
+
+:root {
+  --color-oxblood:  #4D0C1E;
+  --color-crimson:  #7B2137;
+  --color-mauve:    #A85B63;
+  --color-forest:   #2D4A3F;
+  --color-cream:    #E6DFD7;
+  --color-cream-light: #FAF8F5;
+}
+
+@layer base {
+  html {
+    /* Apply JetBrains Mono as base monospaced font across the whole app */
+    font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', ui-monospace, monospace;
+  }
+
+  body {
+    background-color: #E6DFD7;
+    color: #4D0C1E;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Tighten letter-spacing slightly — JetBrains Mono is naturally wide */
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #E6DFD7; }
+::-webkit-scrollbar-thumb { background: #A85B63; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #7B2137; }
